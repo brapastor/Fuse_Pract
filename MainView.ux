@@ -1,13 +1,19 @@
 <App Theme="Basic" ClearColor="#eeeeeeff">
 
-<!-- SEGUNDA CLASE -->
-
-	<StackPanel Alignment="VerticalCenter" Margin="20,0,20,0">
-		<TextInput Value="Username"/>
-		<TextInput IsPassword="true"/>
-		<Button Text="Submit" Alignment="Center" Margin="0,60,0,0" Padding="40,20,40,20"/>
+<!-- PRIMERA CLASE -->
+	
+	<StackPanel Padding="20" Orientation="Vertical">
+		<Button Text="a" Padding="100"/>
+		<Button Text="b"/>
+		<Button Text="c"/>
+		<Button Text="d"/>
+		<Button Text="e"/>
+		<Button Text="f" Width="100" Height="100" Alignment="Left"/>
 	</StackPanel>
 
-<!-- FIN SEGUNDA CLASE -->
+	<Rectangle Fill="#000" Width="50%" Height="50%" />	
+	<Button Width="100" Height="100" Text="saoess"/>
+
+<!-- FIN PRIMERA CLASE -->
 
 </App>
