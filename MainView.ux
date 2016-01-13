@@ -3,17 +3,16 @@
 
 <DockPanel>
 	<StatusBarBackground DockPanel.Dock="Top" />
-		<Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10">
-			<WhilePressed>
-				<Scale Factor="1.5" />
-				<Rotate Degrees="45"/>
-				<Move X="50" Y="20"/>
-			</WhilePressed>
-		</Rectangle>
+		<!-- <Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10"> -->
+		<StackPanel Orientation="Horizontal" Alignment="Center">
+			<Rectangle  Width="100" Height="100"  Fill="#000" CornerRadius="10">
+				<WhileHovering>
+				</WhileHovering>
+			</Rectangle>
+			<Rectangle ux:Name="GreyRectangle" Width="100" Height="100" Fill="#ccc" CornerRadius="10" Margin="10,0,0,0"/>
+		</StackPanel>
+		
 </DockPanel>
-
-
-
 
 
 <!-- FIN CUARTA CLASE -->
