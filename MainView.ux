@@ -1,66 +1,8 @@
 <App Theme="Basic" ClearColor="#eeeeeeff">
-<!-- CUARTA CLASE -->
-
-<DockPanel>
-	<StatusBarBackground DockPanel.Dock="Top" />
-		<!-- <Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10"> -->
-		<StackPanel Orientation="Horizontal" Alignment="Center">
-			<Rectangle  Width="100" Height="100"  Fill="#000" CornerRadius="10">
-				<WhilePressed>
-					<Scale Target="GreyRectangle" Factor="1.5" Duration=".2" Easing="BounceOut" EasingBack="BounceIn" DurationBack=".5"/>
-					<!-- <Rotate Degrees="45" Duration=".2"/> -->
-					<!-- <Move X="50" Y="20"/> -->
-				</WhilePressed>
-			</Rectangle>
-			<Rectangle ux:Name="GreyRectangle" Width="100" Height="100" Fill="#ccc" CornerRadius="10" Margin="10,0,0,0"/>
-		</StackPanel>
-		
-</DockPanel>
-
-
-<!-- FIN CUARTA CLASE -->
-
-
-<!-- TERCERA CLASE  -->
-<!-- <iOS.StatusBarConfig Style="Light" IsVisible="true" Animation="Slide"/>
-<DockPanel> -->
-<!-- 	<Panel Dock="Top">
-		<Rectangle ux:Binding="Appearance" Fill="#ccc"/>
-		<StatusBarBackground />
-	</Panel> -->
-	
-	<!--Espacio para el sidebar de-->
-	<!-- <StatusBarBackground Dock="Top"/> -->
-	<!-- Panel para cambiar el color de botones de tec -->
-<!-- 	<Panel Dock="Bottom">
-		<Rectangle ux:Binding="Appearance" Fill="#00f"/>
-		<BottomBarBackground Dock="Bottom"/>
-	</Panel>
-
-	<StackPanel>
-		<Button Text="My button"/>
-		<TextInput TextColor="#fff"/>
-	</StackPanel>
-
-</DockPanel> -->
-
-<!-- FIN TERCERA CLASE  -->
-
-
-
-<!-- SEGUNDA CLASE -->
-
-	<!-- <StackPanel Alignment="VerticalCenter" Margin="20,0,20,0">
-		<TextInput Value="Username"/>
-		<TextInput IsPassword="true"/>
-		<Button Text="Submit" Alignment="Center" Margin="0,60,0,0" Padding="40,20,40,20"/>
-	</StackPanel> -->
-
-<!-- FIN SEGUNDA CLASE -->
 
 <!-- PRIMERA CLASE -->
 	
-	<!-- <StackPanel Padding="20" Orientation="Vertical">
+	<StackPanel Padding="20" Orientation="Vertical">
 		<Button Text="a" Padding="100"/>
 		<Button Text="b"/>
 		<Button Text="c"/>
@@ -68,13 +10,10 @@
 		<Button Text="e"/>
 		<Button Text="f" Width="100" Height="100" Alignment="Left"/>
 	</StackPanel>
- -->
-	<!-- <Rectangle Fill="#000" Width="50%" Height="50%" />	 -->
-	<!-- <Button Width="100" Height="100" Text="saoess"/> -->
+
+	<Rectangle Fill="#000" Width="50%" Height="50%" />	
+	<Button Width="100" Height="100" Text="saoess"/>
 
 <!-- FIN PRIMERA CLASE -->
-
-
-
 
 </App>
