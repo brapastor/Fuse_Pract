@@ -1,13 +1,30 @@
 <App Theme="Basic" ClearColor="#eeeeeeff">
 
-<!-- SEGUNDA CLASE -->
 
-	<StackPanel Alignment="VerticalCenter" Margin="20,0,20,0">
-		<TextInput Value="Username"/>
-		<TextInput IsPassword="true"/>
-		<Button Text="Submit" Alignment="Center" Margin="0,60,0,0" Padding="40,20,40,20"/>
+<!-- TERCERA CLASE  -->
+<iOS.StatusBarConfig Style="Light" IsVisible="true" Animation="Slide"/>
+<DockPanel> 
+	<Panel Dock="Top">
+		<Rectangle ux:Binding="Appearance" Fill="#ccc"/>
+		<StatusBarBackground />
+	</Panel> 
+	
+	<!--Espacio para el sidebar de-->
+	<StatusBarBackground Dock="Top"/> 
+	<!-- Panel para cambiar el color de botones de tec -->
+	<Panel Dock="Bottom">
+		<Rectangle ux:Binding="Appearance" Fill="#00f"/>
+		<BottomBarBackground Dock="Bottom"/>
+	</Panel>
+
+	<StackPanel>
+		<Button Text="My button"/>
+		<TextInput TextColor="#fff"/>
 	</StackPanel>
 
-<!-- FIN SEGUNDA CLASE -->
+</DockPanel> 
+
+<!-- FIN TERCERA CLASE  -->
+
 
 </App>
