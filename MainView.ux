@@ -1,16 +1,36 @@
-<App Theme="Basic" ClearColor="#000">
-<!-- TERCERA CLASE  -->
-<iOS.StatusBarConfig Style="Light" IsVisible="true" Animation="Slide"/>
+<App Theme="Basic" ClearColor="#eeeeeeff">
+<!-- CUARTA CLASE -->
+
 <DockPanel>
+	<StatusBarBackground DockPanel.Dock="Top" />
+		<Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10">
+			<WhilePressed>
+				<Scale Factor="1.5" />
+				<Rotate Degrees="45"/>
+				<Move X="50" Y="20"/>
+			</WhilePressed>
+		</Rectangle>
+</DockPanel>
+
+
+
+
+
+<!-- FIN CUARTA CLASE -->
+
+
+<!-- TERCERA CLASE  -->
+<!-- <iOS.StatusBarConfig Style="Light" IsVisible="true" Animation="Slide"/>
+<DockPanel> -->
 <!-- 	<Panel Dock="Top">
 		<Rectangle ux:Binding="Appearance" Fill="#ccc"/>
 		<StatusBarBackground />
 	</Panel> -->
 	
 	<!--Espacio para el sidebar de-->
-	<StatusBarBackground Dock="Top"/>
+	<!-- <StatusBarBackground Dock="Top"/> -->
 	<!-- Panel para cambiar el color de botones de tec -->
-	<Panel Dock="Bottom">
+<!-- 	<Panel Dock="Bottom">
 		<Rectangle ux:Binding="Appearance" Fill="#00f"/>
 		<BottomBarBackground Dock="Bottom"/>
 	</Panel>
@@ -20,9 +40,7 @@
 		<TextInput TextColor="#fff"/>
 	</StackPanel>
 
-</DockPanel>
-
-
+</DockPanel> -->
 
 <!-- FIN TERCERA CLASE  -->
 
