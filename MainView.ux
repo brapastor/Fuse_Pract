@@ -6,8 +6,11 @@
 		<!-- <Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10"> -->
 		<StackPanel Orientation="Horizontal" Alignment="Center">
 			<Rectangle  Width="100" Height="100"  Fill="#000" CornerRadius="10">
-				<WhileHovering>
-				</WhileHovering>
+				<WhilePressed>
+					<Scale Target="GreyRectangle" Factor="1.5" Duration=".2" Easing="BounceOut" EasingBack="BounceIn" DurationBack=".5"/>
+					<!-- <Rotate Degrees="45" Duration=".2"/> -->
+					<!-- <Move X="50" Y="20"/> -->
+				</WhilePressed>
 			</Rectangle>
 			<Rectangle ux:Name="GreyRectangle" Width="100" Height="100" Fill="#ccc" CornerRadius="10" Margin="10,0,0,0"/>
 		</StackPanel>

@@ -21,8 +21,7 @@
         "Fuse.iOS",
         "FuseCore",
         "Uno.Collections",
-        "Uno.Geometry",
-        "Fuse.Native"
+        "Uno.Geometry"
   ],
   "Includes": [
     "*"
