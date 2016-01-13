@@ -1,30 +1,49 @@
-<App Theme="Basic" ClearColor="#fff">
-
-<!-- QUINTA CLASE IMAGE BASIC -->
+<App Theme="Basic" ClearColor="#eeeeeeff">
+	<!-- OBSERVABLE CRASH COURSE -->
 	<DockPanel>
-		<StatusBarBackground Dock="Top"/>
-		<BottomBarBackground Dock="Bottom" />
-		
-		<Image Width="256" Height="128">
-			<MultiDensityImageSource>
-				<FileImageSource File="Assets/test.png" Density="1"/>
-				<FileImageSource File="Assets/test.png" Density="2"/>
-			</MultiDensityImageSource>
-		</Image>
+		<StatusBarBackground DockPanel.Dock="Top"/>
+		<JavaScript>
+			var Observable = require('FuseJS/Observable');
+			
+			var myVariable = Observable("UPPERCASE lowercase");
 
-		<!-- Imagen con resource -->
-		<!-- <FileImageSource File="Assets/test.png" ux:Global="testpattern"/>
+
+			var lowercase = myVariable.map(function(x) {
+				return x.toLowerCase();
+			});
+
+			var uppercase = myVariable.map(function(x){
+				return x.toUpperCase();
+			});
+
+			var isBrayan = myVariable.map(function(x){
+				return x == "brayan";
+			}).not();
+
+			function button_clicked(){
+				myVariable.value = "Some other value";
+				debug_log(myVariable.value);
+			}
+
+			module.exports = {
+				myVariable: myVariable,
+				uppercase:uppercase,
+				lowercase:lowercase,
+				isBrayan:isBrayan,
+				button_clicked: button_clicked
+			};
+		</JavaScript>	
+
 		<StackPanel>
-			<Image Source="testpattern"/>
-			<Image Source="testpattern"/>
-		</StackPanel> -->
-		<!-- Fin Imagen con resource -->
+			<TextInput Value="{myVariable}"/>
+			<Text Value="{uppercase}" />
+			<Text Value="{lowercase}" />
+			<Text Value="{isBrayan}" />
 
-	
+			<Switch Value="{isBrayan}"/>
 
-		<!-- <Image File="Assets/test.png"  ContentAlignment="Left" StretchMode="Uniform" /> -->
+			<Button Clicked="{button_clicked}" Text="Change the Value"/>
+		</StackPanel>
 
-		<!-- <Image File="Assets/test.png" StretchMode="Uniform" StretchDirection="Both"/> -->
-
-	</DockPanel>	
+	</DockPanel>
 </App>
