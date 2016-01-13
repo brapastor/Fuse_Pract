@@ -1,23 +1,30 @@
-<App Theme="Basic" ClearColor="#eeeeeeff">
+<App Theme="Basic" ClearColor="#fff">
 
-<!-- CUARTA CLASE -->
+<!-- QUINTA CLASE IMAGE BASIC -->
+	<DockPanel>
+		<StatusBarBackground Dock="Top"/>
+		<BottomBarBackground Dock="Bottom" />
+		
+		<Image Width="256" Height="128">
+			<MultiDensityImageSource>
+				<FileImageSource File="Assets/test.png" Density="1"/>
+				<FileImageSource File="Assets/test.png" Density="2"/>
+			</MultiDensityImageSource>
+		</Image>
 
-<DockPanel>
-	<StatusBarBackground DockPanel.Dock="Top" />
-		<!-- <Rectangle TransformOrigin="TopLeft" Width="100" Height="100"  Fill="#000" CornerRadius="10"> -->
-		<StackPanel Orientation="Horizontal" Alignment="Center">
-			<Rectangle  Width="100" Height="100"  Fill="#000" CornerRadius="10">
-				<WhilePressed>
-					<Scale Target="GreyRectangle" Factor="1.5" Duration=".2" Easing="BounceOut" EasingBack="BounceIn" DurationBack=".5"/>
-					<Rotate Degrees="45" Duration=".2"/>
-					<Move X="50" Y="20"/>
-				</WhilePressed>
-			</Rectangle>
-			<Rectangle ux:Name="GreyRectangle" Width="100" Height="100" Fill="#ccc" CornerRadius="10" Margin="10,0,0,0"/>
-		</StackPanel>
-</DockPanel>
+		<!-- Imagen con resource -->
+		<!-- <FileImageSource File="Assets/test.png" ux:Global="testpattern"/>
+		<StackPanel>
+			<Image Source="testpattern"/>
+			<Image Source="testpattern"/>
+		</StackPanel> -->
+		<!-- Fin Imagen con resource -->
 
-<!-- FIN CUARTA CLASE -->
+	
 
+		<!-- <Image File="Assets/test.png"  ContentAlignment="Left" StretchMode="Uniform" /> -->
 
+		<!-- <Image File="Assets/test.png" StretchMode="Uniform" StretchDirection="Both"/> -->
+
+	</DockPanel>	
 </App>
