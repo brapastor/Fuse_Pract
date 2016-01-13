@@ -1,4 +1,6 @@
 <App Theme="Basic" ClearColor="#eeeeeeff">
+	<!-- PRIMERA CLASE -->
+	
 	<!-- <StackPanel Padding="20" Orientation="Vertical">
 		<Button Text="a" Padding="100"/>
 		<Button Text="b"/>
@@ -8,7 +10,18 @@
 		<Button Text="f" Width="100" Height="100" Alignment="Left"/>
 	</StackPanel>
  -->
-	<Rectangle Fill="#000" Width="50%" Height="50%" />	
+	<!-- <Rectangle Fill="#000" Width="50%" Height="50%" />	 -->
 	<!-- <Button Width="100" Height="100" Text="saoess"/> -->
-</App>
 
+<!-- FIN PRIMERA CLASE -->
+
+<!-- SEGUNDA CLASE -->
+
+	<StackPanel Alignment="VerticalCenter" Margin="20,0,20,0">
+		<TextInput Value="Username"/>
+		<TextInput IsPassword="true"/>
+		<Button Text="Submit" Alignment="Center" Margin="0,60,0,0" Padding="40,20,40,20"/>
+	</StackPanel>
+
+<!-- FIN SEGUNDA CLASE -->
+</App>
