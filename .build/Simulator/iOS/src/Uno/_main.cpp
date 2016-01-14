@@ -1803,6 +1803,7 @@ namespace g{namespace Uno{namespace UX{struct FileSource_type;}} namespace Fuse{
 namespace g{namespace Uno{namespace UX{struct FileSource_type;}} namespace Fuse{namespace Resources{::g::Uno::UX::FileSource_type* FileResource_typeof();}}}
 namespace g{namespace Uno{namespace UX{struct FileSource_type;}} namespace Outracks{namespace Simulator{::g::Uno::UX::FileSource_type* ByteFileSource_typeof();}}}
 namespace g{namespace Uno{namespace UX{struct Property_type; Property_type* Property_typeof();}}}
+namespace g{namespace Uno{namespace UX{struct Property_type;}} ::g::Uno::UX::Property_type* MainView__Fuse_Controls_TextControl_string_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property_type;}} namespace Fuse{namespace BasicTheme{::g::Uno::UX::Property_type* BasicStyle__Fuse_Animations_Change_1_float4_Value_Property_typeof();}}}
 namespace g{namespace Uno{namespace UX{struct Property_type;}} namespace Fuse{namespace BasicTheme{::g::Uno::UX::Property_type* BasicStyle__Fuse_Controls_Button_string_Text_Property_typeof();}}}
 namespace g{namespace Uno{namespace UX{struct Property_type;}} namespace Fuse{namespace BasicTheme{::g::Uno::UX::Property_type* BasicStyle__Fuse_Controls_TextControl_float_FontSize_Property_typeof();}}}
@@ -3157,6 +3158,7 @@ void uInitRtti()
         (uType*(*)())&::g::iOS::WebKit::Interop::IWKNavigationDelegate_typeof,
         (uType*(*)())&::g::iOS::WebKit::WKNavigation_typeof,
         (uType*(*)())&::g::iOS::WebKit::WKWebView_typeof,
+        (uType*(*)())&::g::MainView__Fuse_Controls_TextControl_string_Value_Property_typeof,
         (uType*(*)())&::g::MainView_typeof,
         (uType*(*)())&::g::ObjC::Class_typeof,
         (uType*(*)())&::g::ObjC::ID_typeof,

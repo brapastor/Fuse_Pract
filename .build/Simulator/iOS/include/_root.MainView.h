@@ -3,7 +3,9 @@
 
 #pragma once
 #include <Fuse.App.h>
+namespace g{namespace Fuse{namespace Reactive{struct EventBinding;}}}
 namespace g{struct MainView;}
+namespace g{struct MainView__Fuse_Controls_TextControl_string_Value_Property;}
 
 namespace g{
 
@@ -16,6 +18,10 @@ void MainView__New2_fn(MainView** __retval);
 
 struct MainView : ::g::Fuse::App
 {
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
+    uStrong<MainView__Fuse_Controls_TextControl_string_Value_Property*> temp_Value_inst;
+    uStrong<MainView__Fuse_Controls_TextControl_string_Value_Property*> temp1_Value_inst;
+
     void ctor_3();
     void InitializeUX();
     static MainView* New2();

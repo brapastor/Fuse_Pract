@@ -1,49 +1,67 @@
 <App Theme="Basic" ClearColor="#eeeeeeff">
 	<!-- OBSERVABLE CRASH COURSE -->
 	<DockPanel>
-		<StatusBarBackground DockPanel.Dock="Top"/>
+		<StatusBarBackground DockPanel.Dock="Top" />
 		<JavaScript>
-			var Observable = require('FuseJS/Observable');
-			
-			var myVariable = Observable("UPPERCASE lowercase");
+			var Observable= require('FuseJS/Observable');
 
-
-			var lowercase = myVariable.map(function(x) {
-				return x.toLowerCase();
-			});
-
-			var uppercase = myVariable.map(function(x){
-				return x.toUpperCase();
-			});
-
-			var isBrayan = myVariable.map(function(x){
-				return x == "brayan";
-			}).not();
-
-			function button_clicked(){
-				myVariable.value = "Some other value";
-				debug_log(myVariable.value);
+			function Person (name,age){
+				this.name = name;
+				this.age = age;
 			}
 
-			module.exports = {
-				myVariable: myVariable,
-				uppercase:uppercase,
-				lowercase:lowercase,
-				isBrayan:isBrayan,
-				button_clicked: button_clicked
-			};
+			var myVariable = Observable(
+				new Person("Jair",23),
+				new Person("Brayan",24),
+				new Person("Joao",50));
+
+			var uppercase = myVariable
+			.where(function(x){
+				return x.age>23;
+			})
+			.map(function(x){
+				return new Person(x.name.toUpperCase(),x.age);
+			});
+
+			var name = Observable("");
+			var age = Observable("");
+
+			
+			function submit(){
+				var person = new Person(name.value, age.value);
+				myVariable.add(person);
+				name.value="";
+				age.value="";
+			}
+
+			function clear(){
+				myVariable.clear();
+			}
+
+			
+
+			module.exports={
+				myVariable:myVariable,
+				name:name,
+				age:age,
+				submit:submit,
+				clear:clear,
+				uppercase:uppercase
+			}
+			
 		</JavaScript>	
 
 		<StackPanel>
-			<TextInput Value="{myVariable}"/>
-			<Text Value="{uppercase}" />
-			<Text Value="{lowercase}" />
-			<Text Value="{isBrayan}" />
-
-			<Switch Value="{isBrayan}"/>
-
-			<Button Clicked="{button_clicked}" Text="Change the Value"/>
+			<StackPanel>
+				<Button Clicked="{clear}" Text="Clear" />
+				<TextInput Value="{name}"/>
+				<TextInput Value="{age}"/>
+				<Button Clicked="{submit}" Text="Submit" />
+			</StackPanel>
+			<Each Items="{uppercase}">
+			<Text Value="{name}"/>
+			<Text Value="{age}"/>
+			</Each>
 		</StackPanel>
-
 	</DockPanel>
 </App>
